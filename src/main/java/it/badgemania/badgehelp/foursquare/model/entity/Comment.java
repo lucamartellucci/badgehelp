@@ -1,67 +1,39 @@
-/*
- * FoursquareAPI - Foursquare API for Java
- * Copyright (C) 2008 - 2011 Antti Leppä / Foyt
- * http://www.foyt.fi
- * 
- * License: 
- * 
- * Licensed under GNU Lesser General Public License Version 3 or later (the "LGPL")
- * http://www.gnu.org/licenses/lgpl.html
- */
-
 package it.badgemania.badgehelp.foursquare.model.entity;
 
 import java.io.Serializable;
 
-
-
-/**
- * Class representing Comment entity
- * 
- * @author Antti Leppä
- */
 public class Comment implements Serializable {
 
-  private static final long serialVersionUID = 6671734583007572548L;
+	private static final long serialVersionUID = 6671734583007572548L;
 
-  /**
-   * Returns comment's id
-   * 
-   * @return comment's id
-   */
-  public String getId() {
-    return id;
-  }
-  
-  /**
-   * Returns when this comment was created (epoch)
-   * 
-   * @return when this comment was created
-   */
-  public Long getCreatedAt() {
-    return createdAt;
-  }
-  
-  /**
-   * Returns user that left the comment
-   * 
-   * @return user that left the comment
-   */
-  public CompactUser getUser() {
-    return user;
-  }
-  
-  /**
-   * Returns comment's text
-   * 
-   * @return comment's text
-   */
-  public String getText() {
-    return text;
-  }
-  
-  private String id;
-  private Long createdAt;
-  private CompactUser user;
-  private String text;
+	private String id;
+	private Long createdAt;
+	private CompactUser user;
+	private String text;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public Long getCreatedAt() {
+		return createdAt;
+	}
+	public void setCreatedAt(Long createdAt) {
+		this.createdAt = createdAt;
+	}
+	public CompactUser getUser() {
+		return user;
+	}
+	public void setUser(CompactUser user) {
+		this.user = user;
+	}
+	public String getText() {
+		return text;
+	}
+	public void setText(String text) {
+		this.text = text;
+	}
+	
 }

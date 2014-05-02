@@ -42,6 +42,5 @@ public class Badge implements Serializable {
 		return unlocks;
 	}
 	
-	
 
 }

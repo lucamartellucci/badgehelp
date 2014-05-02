@@ -5,6 +5,21 @@ import java.io.Serializable;
 public class Checkin implements Serializable {
 
 	private static final long serialVersionUID = 4805612286360679516L;
+	
+	private String id;
+	private String type;
+	private Boolean isPrivate;
+	private CompactUser user;
+	private Boolean isMayor;
+	private String timeZone;
+	private CompleteVenue venue;
+	private Location location;
+	private String shout;
+	private Long createdAt;
+	private Source source;
+	private PhotoGroup photos;
+	private CommentGroup comments;
+	private CheckinGroup overlaps;
 
 	public String getId() {
 		return id;
@@ -68,18 +83,5 @@ public class Checkin implements Serializable {
 		this.isPrivate = isPrivate;
 	}
 
-	private String id;
-	private String type;
-	private Boolean isPrivate;
-	private CompactUser user;
-	private Boolean isMayor;
-	private String timeZone;
-	private CompleteVenue venue;
-	private Location location;
-	private String shout;
-	private Long createdAt;
-	private Source source;
-	private PhotoGroup photos;
-	private CommentGroup comments;
-	private CheckinGroup overlaps;
+
 }

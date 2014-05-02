@@ -6,6 +6,10 @@ import java.util.Arrays;
 public class BadgeImage implements Serializable {
 
 	private static final long serialVersionUID = 3839275051310645747L;
+	
+	private String prefix;
+	private Integer[] sizes;
+	private String name;
 
 	public String getPrefix() {
 		return prefix;
@@ -19,9 +23,7 @@ public class BadgeImage implements Serializable {
 		return name;
 	}
 
-	private String prefix;
-	private Integer[] sizes;
-	private String name;
+	
 
 	@Override
 	public String toString() {
