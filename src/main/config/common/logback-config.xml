@@ -1,0 +1,39 @@
+<configuration scan="true" scanPeriod="10 seconds">
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logging.dir}/badgehelp_trace</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logging.dir}/archive/badgehelp_trace.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+        </rollingPolicy>
+        <Append>true</Append>
+        <BufferedIO>@log_bufferedIO@</BufferedIO>
+        <BufferSize>16384</BufferSize>
+        <ImmediateFlush>@log_immediateFlush@</ImmediateFlush>
+        <encoder>
+            <pattern>@log_prefix@</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logging.dir}/badgehelp_error</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logging.dir}/archive/badgehelp_error.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>@log_prefix@</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <logger name="it.badgemania.badgehelp" level="@log_level@"/>
+
+    <root level="ERROR">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="FILE_ERROR"/>
+    </root>
+    
+</configuration>
