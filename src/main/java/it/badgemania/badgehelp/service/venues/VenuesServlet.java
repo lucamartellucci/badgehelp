@@ -1,4 +1,4 @@
-package it.badgemania.badgehelp.venues;
+package it.badgemania.badgehelp.service.venues;
 
 import java.io.IOException;
 import java.util.ArrayList;

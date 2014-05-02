@@ -5,8 +5,8 @@ import it.badgemania.badgehelp.foursquare.model.entity.CompactVenue;
 import it.badgemania.badgehelp.foursquare.model.entity.VenuesSearchResult;
 import it.badgemania.badgehelp.foursquare.rest.AbstractFoursquareRestClient;
 import it.badgemania.badgehelp.foursquare.rest.FoursquareVenuesWebTarget;
-import it.badgemania.badgehelp.venues.VenuesException;
-import it.badgemania.badgehelp.venues.VenuesService;
+import it.badgemania.badgehelp.service.venues.VenuesException;
+import it.badgemania.badgehelp.service.venues.VenuesService;
 
 import java.util.ArrayList;
 import java.util.List;

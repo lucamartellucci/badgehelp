@@ -1,4 +1,4 @@
-package it.badgemania.badgehelp.venues;
+package it.badgemania.badgehelp.service.venues;
 
 public class VenuesException extends Exception {
 
