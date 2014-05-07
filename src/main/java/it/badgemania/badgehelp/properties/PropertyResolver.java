@@ -18,18 +18,19 @@ import org.slf4j.Logger;
 @Singleton
 public class PropertyResolver {
 	
-	private static final String PROPERTY_FOLDER = "badgehelp/config";
-
 	@Inject
 	private Logger logger;
+	
+	@Inject
+	@ConfigLocation
+	private String configLocation;
 
-	Map<String, Object> properties = new HashMap<>();
+	private Map<String, Object> properties = new HashMap<>();
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@PostConstruct
 	private void init() {
 		logger.info("Init the property resolver...");
-		String configLocation = new StringBuilder(System.getProperty("CONFDIR")).append("/").append(PROPERTY_FOLDER).toString();
 		List<File> propertyFiles = getPropertyFiles(configLocation);
 		
 		try {
@@ -54,7 +55,7 @@ public class PropertyResolver {
 		
 		if (listFiles != null && listFiles.length > 0) {
 			propertyFiles = Arrays.asList(listFiles);
-			logger.info("Found [{}] property files: {}",propertyFiles.size(), propertyFiles);
+			logger.info("Found {} property files: {}",propertyFiles.size(), propertyFiles);
 		} else {
 			propertyFiles = new ArrayList<>();
 			logger.info("No property file found");

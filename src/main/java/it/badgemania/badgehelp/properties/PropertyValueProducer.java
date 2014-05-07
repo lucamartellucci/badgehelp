@@ -49,20 +49,29 @@ public class PropertyValueProducer {
 		return value;
 	}
 
-//	@Produces
-//	@PropertyValue
-//	public Double getDoubleConfigValue(InjectionPoint ip) {
-//		String value = getStringConfigValue(ip);
-//
-//		return (value != null) ? Double.valueOf(value) : null;
-//	}
-//	
-//	@Produces
-//	@PropertyValue
-//	public Integer getIntegerConfigValue(InjectionPoint ip) {
-//		String value = getStringConfigValue(ip);
-//
-//		return (value != null) ? Integer.valueOf(value) : null;
-//	}
+	@Produces
+	@PropertyValue
+	public Double getDoubleConfigValue(InjectionPoint ip) {
+		String value = getStringConfigValue(ip);
+
+		return (value != null) ? Double.valueOf(value) : null;
+	}
+
+	@Produces
+	@PropertyValue
+	public Integer getIntegerConfigValue(InjectionPoint ip) {
+		String value = getStringConfigValue(ip);
+
+		return (value != null) ? Integer.valueOf(value) : null;
+	}
+	
+	@Produces
+	@PropertyValue
+	public Boolean getBooleanConfigValue(InjectionPoint ip) {
+		String value = getStringConfigValue(ip);
+
+		return (value != null) ? Boolean.valueOf(value) : null;
+	}
+
 
 }

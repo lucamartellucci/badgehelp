@@ -39,7 +39,7 @@ public class MyRestClientLoggingFilter implements ClientRequestFilter, ClientRes
 	private Logger logger;
 
 	public MyRestClientLoggingFilter() {
-		this.maxEntitySize = 10 * 1024;
+		this.maxEntitySize = 5 * 1024;
 		this.printEntity = true;
 		this.logger = LOGGER;
 	}

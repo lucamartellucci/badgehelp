@@ -1,4 +1,4 @@
-package it.badgemania.badgehelp.foursquare.venues;
+package it.badgemania.badgehelp.foursquare.rest.service;
 
 import it.badgemania.badgehelp.foursquare.model.Result;
 import it.badgemania.badgehelp.foursquare.model.entity.CompactVenue;
