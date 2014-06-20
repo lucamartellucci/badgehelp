@@ -1,10 +1,10 @@
-package it.badgemania.badgehelp.foursquare.rest.service;
+package it.badgemania.badgehelp.foursquare.rest.jersey;
 
 import it.badgemania.badgehelp.foursquare.model.Result;
 import it.badgemania.badgehelp.foursquare.model.entity.CompactVenue;
 import it.badgemania.badgehelp.foursquare.model.entity.VenuesSearchResult;
-import it.badgemania.badgehelp.foursquare.rest.AbstractFoursquareRestClient;
-import it.badgemania.badgehelp.foursquare.rest.FoursquareVenuesWebTarget;
+import it.badgemania.badgehelp.model.Venue;
+import it.badgemania.badgehelp.model.adapter.VenueAdapter;
 import it.badgemania.badgehelp.service.venues.VenuesException;
 import it.badgemania.badgehelp.service.venues.VenuesService;
 
@@ -30,7 +30,7 @@ public class FoursquareVenuesService extends AbstractFoursquareRestClient implem
 	private WebTarget venuesWebTarget;
 	
 	@Override
-	public List<String> findVenuesAroundMe(Double latitude, Double longitude) throws VenuesException {
+	public List<Venue> findVenuesAroundMe(Double latitude, Double longitude) throws VenuesException {
 		
 		final String llParam = new StringBuffer().append(latitude).append(",").append(longitude).toString();
 		logger.debug("Searching venues around ll [{}]", llParam);
@@ -39,20 +39,20 @@ public class FoursquareVenuesService extends AbstractFoursquareRestClient implem
 	}
 
 	@Override
-	public List<String> findVenuesNearPlace(String place) throws VenuesException {
+	public List<Venue> findVenuesNearPlace(String place) throws VenuesException {
 		logger.debug("Searching venues near place [{}]", place);
 		return findVenues(venuesWebTarget.queryParam("near", place));
 	}
 	
 	
-	protected List<String> findVenues(WebTarget target) throws VenuesException {
-		List<String> result = new ArrayList<>();
-		
+	protected List<Venue> findVenues(WebTarget target) throws VenuesException {
+		List<Venue> result = new ArrayList<>();
+		VenueAdapter venueAdapter = new VenueAdapter();
 		try {
 			VenuesSearchResult venuesResponse = this.getForEntity(target, MediaType.APPLICATION_JSON,new GenericType<Result<VenuesSearchResult>>(){});
 			if (venuesResponse != null) {
 				for (CompactVenue venue : venuesResponse.getVenues()) {
-					result.add(venue.getName());
+					result.add(venueAdapter.from4SQVenueToVenue(venue));
 				}
 			}
 		} catch (Exception e) {

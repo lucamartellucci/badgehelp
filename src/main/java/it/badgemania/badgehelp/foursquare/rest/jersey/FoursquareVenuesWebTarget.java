@@ -1,4 +1,4 @@
-package it.badgemania.badgehelp.foursquare.rest;
+package it.badgemania.badgehelp.foursquare.rest.jersey;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;

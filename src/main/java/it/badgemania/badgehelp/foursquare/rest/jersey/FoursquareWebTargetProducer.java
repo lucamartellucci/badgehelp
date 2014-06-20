@@ -1,4 +1,4 @@
-package it.badgemania.badgehelp.foursquare.rest;
+package it.badgemania.badgehelp.foursquare.rest.jersey;
 
 import it.badgemania.badgehelp.logging.MyRestClientLoggingFilter;
 import it.badgemania.badgehelp.properties.PropertyValue;
@@ -32,9 +32,10 @@ public class FoursquareWebTargetProducer {
 	@Inject @PropertyValue("proxy.password")				private String proxyPassword;
 	@Inject @PropertyValue("proxy.enable")					private Boolean proxyEnable;
 	
+	
 	@Produces
 	@FoursquareVenuesWebTarget
-	WebTarget produceFoursquarePlaceWebTarget() {
+	WebTarget produceFoursquareVenuesWebTarget() {
 		
 		logger.info("Producing Foursquare Venues service...");
 		logger.info("venuesEndpoint: {}, clientId: {}, clientSecret: {}, apiVersion: {}, redirectUri: {}",

@@ -1,4 +1,4 @@
-package it.badgemania.badgehelp.foursquare.rest;
+package it.badgemania.badgehelp.foursquare.rest.jersey;
 
 import it.badgemania.badgehelp.foursquare.model.Result;
 

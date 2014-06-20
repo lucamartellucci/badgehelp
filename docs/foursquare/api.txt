@@ -1,0 +1,447 @@
+https://api.foursquare.com/v2/users/7661157/checkins?oauth_token=AZNSG5MKGHYH4YSM4SI4UFB5X0GVXNQRWQKX5ZPLE0CIQBW0&v=20140513&afterTimestamp=1399507200
+
+{
+meta: {
+code: 200
+},
+notifications: [
+{
+type: "notificationTray",
+item: {
+unreadCount: 0
+}
+}
+],
+response: {
+checkins: {
+count: 400,
+items: [
+{
+id: "537238ca498e73b4241536c1",
+createdAt: 1399994570,
+type: "checkin",
+timeZoneOffset: 120,
+venue: {
+id: "4bc2da8f74a9a59320cbd3f6",
+name: "Ericsson",
+contact: {
+phone: "0239572000",
+formattedPhone: "02 3957 2000"
+},
+location: {
+address: "Viale Milanofiori",
+crossStreet: "Strada 2, Palazzo C",
+lat: 45.4009630560214,
+lng: 9.148175431739825,
+postalCode: "20090",
+cc: "IT",
+city: "Assago",
+state: "Lombardy",
+country: "Italy"
+},
+categories: [
+{
+id: "4bf58dd8d48988d124941735",
+name: "Office",
+pluralName: "Offices",
+shortName: "Office",
+icon: {
+prefix: "https://ss1.4sqi.net/img/categories_v2/building/default_",
+suffix: ".png"
+},
+primary: true
+}
+],
+verified: false,
+stats: {
+checkinsCount: 1286,
+usersCount: 101,
+tipCount: 2
+},
+url: "http://ericsson.com/it",
+likes: {
+count: 1,
+groups: [ ],
+summary: "You"
+},
+like: true,
+beenHere: {
+count: 59,
+marked: false
+}
+},
+likes: {
+count: 0,
+groups: [ ]
+},
+like: false,
+photos: {
+count: 0,
+items: [ ]
+},
+posts: {
+count: 0,
+textCount: 0
+},
+comments: {
+count: 0
+},
+source: {
+name: "foursquare for Android",
+url: "https://foursquare.com/download/#/android"
+}
+},
+{
+id: "536f432211d2f36f43087b25",
+createdAt: 1399800610,
+type: "checkin",
+timeZoneOffset: 120,
+venue: {
+id: "5106756ce4b0e850b3da3d40",
+name: "Parco del Galgario",
+contact: { },
+location: {
+lat: 45.700045830198725,
+lng: 9.681082024999577,
+cc: "IT",
+country: "Italy"
+},
+categories: [
+{
+id: "4bf58dd8d48988d163941735",
+name: "Park",
+pluralName: "Parks",
+shortName: "Park",
+icon: {
+prefix: "https://ss1.4sqi.net/img/categories_v2/parks_outdoors/park_",
+suffix: ".png"
+},
+primary: true
+}
+],
+verified: false,
+stats: {
+checkinsCount: 68,
+usersCount: 12,
+tipCount: 1
+},
+likes: {
+count: 1,
+groups: [
+{
+type: "others",
+count: 1,
+items: [
+{
+id: "36869121",
+firstName: "Davide",
+lastName: "Milesi",
+gender: "male",
+photo: {
+prefix: "https://irs1.4sqi.net/img/user/",
+suffix: "/XYVLJA24VRIIWH5R.jpg"
+}
+}
+]
+}
+],
+summary: "Davide Milesi"
+},
+like: false,
+beenHere: {
+count: 14,
+marked: true
+}
+},
+likes: {
+count: 0,
+groups: [ ]
+},
+like: false,
+photos: {
+count: 0,
+items: [ ]
+},
+posts: {
+count: 0,
+textCount: 0
+},
+comments: {
+count: 0
+},
+source: {
+name: "foursquare for Android",
+url: "https://foursquare.com/download/#/android"
+}
+},
+{
+id: "536e0e8511d2e624f8c17922",
+createdAt: 1399721605,
+type: "checkin",
+timeZoneOffset: 120,
+venue: {
+id: "4e7e581ef5b99ba2ebedaf61",
+name: "Ol Giopì e la Margì",
+contact: {
+phone: "035242366",
+formattedPhone: "035 242366"
+},
+location: {
+address: "Via Borgo Palazzo 27",
+lat: 45.697753642243605,
+lng: 9.680596137776588,
+postalCode: "24125",
+cc: "IT",
+city: "Bergamo",
+state: "Lombardy",
+country: "Italy"
+},
+categories: [
+{
+id: "4bf58dd8d48988d110941735",
+name: "Italian Restaurant",
+pluralName: "Italian Restaurants",
+shortName: "Italian",
+icon: {
+prefix: "https://ss1.4sqi.net/img/categories_v2/food/italian_",
+suffix: ".png"
+},
+primary: true
+}
+],
+verified: false,
+stats: {
+checkinsCount: 52,
+usersCount: 43,
+tipCount: 1
+},
+likes: {
+count: 3,
+groups: [
+{
+type: "others",
+count: 3,
+items: [
+{
+id: "23143585",
+firstName: "Emanuele",
+lastName: "Zurru",
+gender: "male",
+photo: {
+prefix: "https://irs2.4sqi.net/img/user/",
+suffix: "/HOHNVPVDAQ2KKFUO.jpg"
+}
+},
+{
+id: "3259213",
+firstName: "Idros",
+gender: "male",
+photo: {
+prefix: "https://irs3.4sqi.net/img/user/",
+suffix: "/T1LH5IERISXTLLXH.jpg"
+}
+},
+{
+id: "55585873",
+firstName: "Chiara",
+lastName: "Tarantino",
+gender: "female",
+photo: {
+prefix: "https://irs3.4sqi.net/img/user/",
+suffix: "/HOHYL1Y4MHE1AVK3.jpg"
+}
+}
+]
+}
+],
+summary: "Emanuele Zurru, Idros & Chiara Tarantino"
+},
+like: false,
+beenHere: {
+count: 1,
+marked: false
+}
+},
+likes: {
+count: 0,
+groups: [ ]
+},
+like: false,
+photos: {
+count: 0,
+items: [ ]
+},
+posts: {
+count: 0,
+textCount: 0
+},
+comments: {
+count: 0
+},
+source: {
+name: "foursquare for Android",
+url: "https://foursquare.com/download/#/android"
+}
+},
+{
+id: "536e0212498e790dac8e9806",
+createdAt: 1399718418,
+type: "checkin",
+timeZoneOffset: 120,
+venue: {
+id: "5106756ce4b0e850b3da3d40",
+name: "Parco del Galgario",
+contact: { },
+location: {
+lat: 45.700045830198725,
+lng: 9.681082024999577,
+cc: "IT",
+country: "Italy"
+},
+categories: [
+{
+id: "4bf58dd8d48988d163941735",
+name: "Park",
+pluralName: "Parks",
+shortName: "Park",
+icon: {
+prefix: "https://ss1.4sqi.net/img/categories_v2/parks_outdoors/park_",
+suffix: ".png"
+},
+primary: true
+}
+],
+verified: false,
+stats: {
+checkinsCount: 68,
+usersCount: 12,
+tipCount: 1
+},
+likes: {
+count: 1,
+groups: [
+{
+type: "others",
+count: 1,
+items: [
+{
+id: "36869121",
+firstName: "Davide",
+lastName: "Milesi",
+gender: "male",
+photo: {
+prefix: "https://irs1.4sqi.net/img/user/",
+suffix: "/XYVLJA24VRIIWH5R.jpg"
+}
+}
+]
+}
+],
+summary: "Davide Milesi"
+},
+like: false,
+beenHere: {
+count: 14,
+marked: true
+}
+},
+likes: {
+count: 0,
+groups: [ ]
+},
+like: false,
+photos: {
+count: 0,
+items: [ ]
+},
+posts: {
+count: 0,
+textCount: 0
+},
+comments: {
+count: 0
+},
+source: {
+name: "foursquare for Android",
+url: "https://foursquare.com/download/#/android"
+}
+},
+{
+id: "536c9cc1498eccd5a8870767",
+createdAt: 1399626945,
+type: "checkin",
+timeZoneOffset: 120,
+venue: {
+id: "4bc2da8f74a9a59320cbd3f6",
+name: "Ericsson",
+contact: {
+phone: "0239572000",
+formattedPhone: "02 3957 2000"
+},
+location: {
+address: "Viale Milanofiori",
+crossStreet: "Strada 2, Palazzo C",
+lat: 45.4009630560214,
+lng: 9.148175431739825,
+postalCode: "20090",
+cc: "IT",
+city: "Assago",
+state: "Lombardy",
+country: "Italy"
+},
+categories: [
+{
+id: "4bf58dd8d48988d124941735",
+name: "Office",
+pluralName: "Offices",
+shortName: "Office",
+icon: {
+prefix: "https://ss1.4sqi.net/img/categories_v2/building/default_",
+suffix: ".png"
+},
+primary: true
+}
+],
+verified: false,
+stats: {
+checkinsCount: 1286,
+usersCount: 101,
+tipCount: 2
+},
+url: "http://ericsson.com/it",
+likes: {
+count: 1,
+groups: [ ],
+summary: "You"
+},
+like: true,
+beenHere: {
+count: 59,
+marked: false
+}
+},
+likes: {
+count: 0,
+groups: [ ]
+},
+like: false,
+photos: {
+count: 0,
+items: [ ]
+},
+posts: {
+count: 0,
+textCount: 0
+},
+comments: {
+count: 0
+},
+source: {
+name: "foursquare for Android",
+url: "https://foursquare.com/download/#/android"
+}
+}
+]
+}
+}
+}

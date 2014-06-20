@@ -1,5 +1,6 @@
 package it.badgemania.badgehelp.resources;
 
+import it.badgemania.badgehelp.model.Venue;
 import it.badgemania.badgehelp.service.venues.VenuesException;
 import it.badgemania.badgehelp.service.venues.VenuesService;
 
@@ -32,9 +33,28 @@ public class VenuesResource {
 //			@ApiParam(value = "Status values that need to be considered for filter", required = true, defaultValue = "available", allowableValues = "available,pending,sold", allowMultiple = true) 
 			@QueryParam("place") String place) {
 		
-		List<String> foundVenues = new ArrayList<>();
+		List<Venue> foundVenues = new ArrayList<>();
 		try {
 			foundVenues = venuesService.findVenuesNearPlace(place);
+		} catch (VenuesException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return Response.ok(foundVenues).build();
+	}
+	
+	
+	@GET
+	@Path("/aroundme")
+//	@ApiOperation(value = "Finds Pets by status", notes = "Multiple status values can be provided with comma seperated strings", response = Pet.class, responseContainer = "List")
+//	@ApiResponses(value = { @ApiResponse(code = 400, message = "Invalid status value") })
+	public Response findVenuesAroundMe(
+//			@ApiParam(value = "Status values that need to be considered for filter", required = true, defaultValue = "available", allowableValues = "available,pending,sold", allowMultiple = true) 
+			@QueryParam("lat") Double latitude, @QueryParam("lng") Double longitude) {
+		
+		List<Venue> foundVenues = new ArrayList<>();
+		try {
+			foundVenues = venuesService.findVenuesAroundMe(latitude, longitude);
 		} catch (VenuesException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

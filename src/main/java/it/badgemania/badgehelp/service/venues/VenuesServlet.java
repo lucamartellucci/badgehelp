@@ -1,5 +1,7 @@
 package it.badgemania.badgehelp.service.venues;
 
+import it.badgemania.badgehelp.model.Venue;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +40,7 @@ public class VenuesServlet extends HttpServlet {
 			String longitude = request.getParameter("longitude");
 			String latitude = request.getParameter("latitude");
 			String near = request.getParameter("near");
-			List<String> places = new ArrayList<>();
+			List<Venue> places = new ArrayList<>();
 			if (longitude != null && latitude != null) {
 				places = venuesService.findVenuesAroundMe(Double.parseDouble(latitude),Double.parseDouble(longitude));
 			} else if (near != null) {
@@ -47,8 +49,8 @@ public class VenuesServlet extends HttpServlet {
 			String output = "No Places Found";
 			if (places != null && places.size() > 0) {
 				StringBuffer placeList = new StringBuffer();
-				for (String place : places) {
-					placeList.append(place).append("\n");
+				for (Venue place : places) {
+					placeList.append(place.getName()).append("\n");
 				}
 				output = placeList.toString();
 			} 
